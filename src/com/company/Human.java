@@ -1,5 +1,8 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Human {
     public String firstName;
     public String lastName;
@@ -37,6 +40,22 @@ public class Human {
 
     public Double getSalary() {
         return salary;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        if(salary > car.value){
+            this.car = car;
+            System.out.println("Gratulacje stac cie na auto, mozesz kupic je za gotowke!");
+        }else if(salary > (car.value / 12)){
+            this.car = car;
+            System.out.println("Co najwyzej mozesz kupic na raty!");
+        }else{
+            System.out.println("Nie stac cie na to auto, zacznij oszczedzac!");
+        }
     }
 
 }

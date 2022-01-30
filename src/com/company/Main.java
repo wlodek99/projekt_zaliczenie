@@ -12,9 +12,25 @@ public class Main {
         Animal cat = new Animal("Kot");
 
         Car citroen = new Car("C5", "PSA", "Blue", 2010);
+        citroen.value = 10000.0;
         Car peugeot = new Car("407", "PSA", "Gold", 2008);
+        peugeot.value = 5000.0;
         student.car = citroen;
         teacher.car = peugeot;
+
+
+        System.out.println("################");
+        System.out.println("###Kupno auta###");
+        System.out.println("################");
+        student.setSalary(500.0);
+        student.setCar(citroen);
+        System.out.println("################");
+        student.setSalary(3500.0);
+        student.setCar(peugeot);
+        System.out.println("################");
+        student.setSalary(12000.00);
+        student.setCar(citroen);
+
 
 
         System.out.println("################");
