@@ -18,28 +18,47 @@ public class Main {
 
 
         System.out.println("################");
+        System.out.println("#####Czlowiek###");
+        System.out.println("################");
         System.out.println("Imie: " + student.firstName);
         System.out.println("Nazwisko: " + student.lastName);
         System.out.println("Wiek: " + student.age + " lat");
+        System.out.println("################");
+        System.out.println("#####Pensja#####");
+        System.out.println("################");
+        student.setSalary(0.0);
+        System.out.println(student.getSalary());
+        student.setSalary(-1.0);
+        System.out.println(student.getSalary());
+        student.setSalary(100.0);
+        System.out.println(student.getSalary());
 
+        System.out.println("################");
+        System.out.println("#####Auto#######");
+        System.out.println("################");
         System.out.println("Model auta: " + student.car.model);
         System.out.println("Producent auta: " + student.car.producer);
         System.out.println("Kolor auta: " + student.car.colour);
         System.out.println("Rok produkcji auta: " + student.car.prodYear);
-        System.out.println("################");
 
+        System.out.println("################");
+        System.out.println("#####Czlowiek###");
         System.out.println("################");
         System.out.println("Imie: " + teacher.firstName);
         System.out.println("Nazwisko: " + teacher.lastName);
         System.out.println("Wiek: " + teacher.age + " lat");
 
+        System.out.println("################");
+        System.out.println("#####Auto#######");
+        System.out.println("################");
         System.out.println("Model auta: " + teacher.car.model);
         System.out.println("Producent auta: " + teacher.car.producer);
         System.out.println("Kolor auta: " + teacher.car.colour);
         System.out.println("Rok produkcji auta: " + teacher.car.prodYear);
+
         System.out.println("################");
-
-
+        System.out.println("####Zwierzeta###");
+        System.out.println("################");
         dog.takeForAWalk();
         dog.takeForAWalk();
         dog.takeForAWalk();
