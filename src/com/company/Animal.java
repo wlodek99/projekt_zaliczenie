@@ -41,4 +41,9 @@ public class Animal {
             System.out.println("Halo policja, zwierz zdechl");
         }
     }
+
+    public String toString(){
+        return  "Gatunek: " + species + " waga: " + weight + " kg";
+    }
+
 }
