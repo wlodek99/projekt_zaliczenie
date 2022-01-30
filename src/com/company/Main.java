@@ -1,11 +1,42 @@
 package com.company;
 
-import com.company.devices.Car;
-import com.company.devices.Phone;
+import com.company.creatures.FarmAnimal;
+import com.company.creatures.Human;
+import com.company.creatures.Pet;
+
 
 public class Main {
 
     public static void main(String[] args) {
+
+        Human student = new Human();
+        Human teacher = new Human();
+        Human homoSapiens = new Human();
+
+        Pet dog = new Pet("dog");
+        Pet cat = new Pet("cat");
+
+        FarmAnimal canis = new FarmAnimal("Canis");
+        FarmAnimal pig = new FarmAnimal("Pig");
+
+        System.out.println("Canis");
+        canis.beEaten();
+        canis.beEaten();
+
+        System.out.println("Kot");
+        cat.feed();
+        cat.feed(10.0);
+
+        System.out.println("Swinia" );
+        pig.feed(20.0);
+        pig.beEaten();
+        pig.beEaten();
+
+
+
+
+
+        /*
 
         Human student = new Human("Wlodek", "Gajewski", 22);
         Human teacher = new Human("Jan", "Kowalski", 45);
@@ -24,9 +55,6 @@ public class Main {
         peugeot.value = 5000.0;
         student.car = citroen;
         teacher.car = peugeot;
-
-
-
 
 
         System.out.println("################");
@@ -69,9 +97,7 @@ public class Main {
 
 
 
-
-
-        /*
+/////////////////////////////
 
         System.out.println("################");
         System.out.println("###Wlaczanie telefonu###");

@@ -1,12 +1,15 @@
-package com.company;
+package com.company.creatures;
 
-public class Animal implements Salleable {
+import com.company.Salleable;
+
+public abstract class Animal implements Salleable, Feedable {
     private static final Double DEFAULT_CAT_WEIGHT = 4.0;
     private static final Double DEFAULT_DOG_WEIGHT = 7.0;
     private static final Double DEFAULT_WEIGHT = 1.0;
-    private Double weight;
+    private static final Double DEFAULT_FOOD_WEIGHT = 1.0;
+    public Double weight;
     final String species;
-    Boolean isAlive;
+    public Boolean isAlive;
 
     public Animal(String species){
         this.isAlive = true;
@@ -19,14 +22,20 @@ public class Animal implements Salleable {
             this.weight = DEFAULT_WEIGHT;
         }
     }
-
+    @Override
     public void feed(){
-        if(this.weight > 0.0){
-            this.isAlive = true;
-            this.weight += 1.0;
-            System.out.println("Mmm jedzonko!");
-        }else{
-            System.out.println("zwierz zdechl z przejedzenia");
+        this.feed(DEFAULT_FOOD_WEIGHT);
+        System.out.println("Mmm jedzonko");
+    }
+
+    @Override
+    public void feed(Double foodWeight) {
+        if (this.isAlive){
+            this.weight += foodWeight;
+            System.out.println("thx 4 food, ");
+            System.out.println("Zwierz nakarmiony, " + foodWeight + "kg");
+        } else {
+            System.out.println("too late wybacz");
         }
     }
 
