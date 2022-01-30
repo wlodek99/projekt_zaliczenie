@@ -12,6 +12,7 @@ public class Main {
 
         Animal dog = new Animal("Pies");
         Animal cat = new Animal("Kot");
+        Animal homoSapiens = new Animal("Homo Sapiens");
 
         Car citroen = new Car("Citroen", "C5", 2010, "Blue");
         Car peugeot = new Car("Peugeot", "407", 2008, "Gold");
@@ -23,6 +24,54 @@ public class Main {
         peugeot.value = 5000.0;
         student.car = citroen;
         teacher.car = peugeot;
+
+
+
+
+
+        System.out.println("################");
+        System.out.println("###Brak zwierza###");
+        System.out.println("################");
+        student.cash = 100.0;
+        teacher.cash = 1000.0;
+        System.out.println("Pieniadze w portfelu nauczyciela: " + teacher.cash);
+        System.out.println("Pieniadze w portfelu studenta: " + student.cash);
+        cat.Sale(student, teacher, 10.0);
+        System.out.println("Pieniadze w portfelu nauczyciela po zakupie: " + teacher.cash);
+        System.out.println("Pieniadze w portfelu studenta po sprzedazy: " + student.cash);
+
+        System.out.println("################");
+        System.out.println("###Jest kot###");
+        System.out.println("################");
+        student.pet = cat;
+
+        System.out.println("Pieniadze w portfelu nauczyciela: " + teacher.cash);
+        System.out.println("Pieniadze w portfelu studenta: " + student.cash);
+        cat.Sale(student, teacher, 10.0);
+        System.out.println("Pieniadze w portfelu nauczyciela po zakupie: " + teacher.cash);
+        System.out.println("Pieniadze w portfelu studenta po sprzedazy: " + student.cash);
+
+        System.out.println("################");
+        System.out.println("###Telefon###");
+        System.out.println("################");
+        student.mobile = iphone;
+        System.out.println("Pieniadze w portfelu nauczyciela: " + teacher.cash);
+        System.out.println("Pieniadze w portfelu studenta: " + student.cash);
+        iphone.Sale(student, teacher, 200.0);
+        System.out.println("Pieniadze w portfelu nauczyciela po zakupie: " + teacher.cash);
+        System.out.println("Pieniadze w portfelu studenta po sprzedazy: " + student.cash);
+
+        System.out.println("################");
+        System.out.println("###Czlowiek!###");
+        System.out.println("################");
+        student.pet = homoSapiens;
+        homoSapiens.Sale(student, teacher, 100.0);
+
+
+
+
+
+        /*
 
         System.out.println("################");
         System.out.println("###Wlaczanie telefonu###");
@@ -104,5 +153,8 @@ public class Main {
         System.out.println("################");
         System.out.println(iphone);
         System.out.println(LG);
+
+
+         */
     }
 }

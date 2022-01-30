@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Human {
     public String firstName;
@@ -8,13 +9,16 @@ public class Human {
     public Integer age;
     public Animal pet;
     public Car car;
+    public Phone mobile;
     public Double salary;
+    public Double cash;
 
     public Human(String firstName, String lastName, Integer age){
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.salary = 0.0;
+        this.cash = 0.0;
     }
 
     public void setPet(Animal pet) {

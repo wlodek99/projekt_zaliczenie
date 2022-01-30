@@ -1,10 +1,14 @@
 package com.company.devices;
 
-public abstract class Device {
+import com.company.Human;
+import com.company.Salleable;
+
+public abstract class Device implements Salleable {
     public String producer;
     public String model;
     public Integer prodYear;
     public String colour;
+
 
     public Device(String producer, String model, Integer prodYear, String colour) {
         this.producer = producer;
@@ -14,6 +18,11 @@ public abstract class Device {
     }
 
     public abstract void turnOn();
+
+    @Override
+    public void Sale(Human seller, Human buyer, Double price) {
+
+    }
 
     public String toString(){
         return "";
