@@ -18,18 +18,31 @@ public class Main {
         System.out.println("################");
 
 
+        Animal dog = new Animal("Pies");
+        Animal dog1 = new Animal("Pies");
+        Animal cat = new Animal("Kot");
 
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.feed();
 
-        Animal dog = new Animal("Pies", 9.0);
-        Animal cat = new Animal("Kot", 3.0);
+        cat.feed();
+        cat.feed();
+        cat.takeForAWalk();
+        cat.takeForAWalk();
+        cat.takeForAWalk();
+        cat.takeForAWalk();
 
-        System.out.println("Gatuenk: " + cat.species);
-        System.out.println("Waga: " + cat.weight + "kg");
-        System.out.println("################");
-        System.out.println("Gatuenk: " + dog.species);
-        System.out.println("Waga: " + dog.weight + "kg");
-        System.out.println("################");
-
+        student.setPet(dog);
+        teacher.setPet(dog1);
+        System.out.println(student.getPet().species);
+        student.pet.feed();
+        student.pet.takeForAWalk();
+        System.out.println("#####################");
+        System.out.println(teacher.getPet().species);
+        teacher.pet.feed();
+        teacher.pet.takeForAWalk();
 
 
 
@@ -41,12 +54,12 @@ public class Main {
         System.out.println("Ekran: " + iphone.screenSize);
         System.out.println("OS: " + iphone.os);
         System.out.println("Pamiec RAM: " + iphone.ramSize + "GB");
-        System.out.println("################");
+        System.out.println("####################");
         System.out.println("Model: " + samsung.model);
         System.out.println("Kolor: " + samsung.colour);
         System.out.println("Ekran: " + samsung.screenSize);
         System.out.println("OS: " + samsung.os);
         System.out.println("Pamiec RAM: " + samsung.ramSize + "GB");
-        System.out.println("################");
+        System.out.println("#####################");
     }
 }
