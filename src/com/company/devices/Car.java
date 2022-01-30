@@ -1,24 +1,36 @@
 package com.company.devices;
 
-public class Car {
-    final String model;
-    final String producer;
-    public String colour;
-    public String engineVolume;
+public class Car extends Device {
+    public Double engineVolume;
     public String plates;
-    public Integer prodYear;
     public Double value;
 
-    public Car(String model, String producer, String colour, Integer prodYear) {
-        this.model = model;
-        this.producer = producer;
-        this.colour = colour;
-        this.prodYear = prodYear;
+    public Car(String producer, String model, Integer prodYear, String colour) {
+        super(producer, model, prodYear, colour);
+        this.engineVolume = 1.9;
         this.value = 0.0;
+        this.plates = "GD 08D30";
     }
 
-    public String toString(){
-        return "Model: " + model + " Producent: " + producer + " Kolor: " + colour + " Rok produkcji: " + prodYear;
+    @Override
+    public void turnOn() {
+        System.out.println("Kluczyk w stacyjce");
+        System.out.println("Rozrusznik kreci sie");
+        System.out.println("Silnik jest uruchomiony");
     }
+
+    @Override
+    public String toString(){
+        return "Car{" +
+                "producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                ", prodYear=" + prodYear +
+                ", engineVolume=" + engineVolume +
+                ", plates=" + plates +
+                ", value='" + value + '\'' +
+                ", colour='" + colour + '\'' +
+                '}';
+    }
+
 
 }

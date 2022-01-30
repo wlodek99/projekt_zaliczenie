@@ -11,18 +11,32 @@ public class Main {
         Human teacher = new Human("Jan", "Kowalski", 45);
 
         Animal dog = new Animal("Pies");
-        Animal dog1 = new Animal("Pies");
         Animal cat = new Animal("Kot");
 
-        Car citroen = new Car("C5", "PSA", "Blue", 2010);
+        Car citroen = new Car("Citroen", "C5", 2010, "Blue");
+        Car peugeot = new Car("Peugeot", "407", 2008, "Gold");
+
+        Phone iphone = new Phone("Apple", "IPhone", 2020, 5.8, 8);
+        Phone LG = new Phone("LG", "Wing", 2021, 6.0, 12);
+
         citroen.value = 10000.0;
-        Car peugeot = new Car("407", "PSA", "Gold", 2008);
         peugeot.value = 5000.0;
         student.car = citroen;
         teacher.car = peugeot;
 
-        Phone iphone = new Phone("iphone",5.3, "IOS", "black", 8);
-        Phone Xiaomi = new Phone("Xiaomi",6.0, "Android", "white", 8);
+        System.out.println("################");
+        System.out.println("###Wlaczanie telefonu###");
+        System.out.println("################");
+        iphone.turnOn();
+        System.out.println("################");
+        LG.turnOn();
+
+        System.out.println("################");
+        System.out.println("###Odpalanie auta###");
+        System.out.println("################");
+        citroen.turnOn();
+        System.out.println("################");
+        peugeot.turnOn();
 
 
         System.out.println("################");
@@ -89,6 +103,6 @@ public class Main {
         System.out.println("####Telefony####");
         System.out.println("################");
         System.out.println(iphone);
-        System.out.println(Xiaomi);
+        System.out.println(LG);
     }
 }
