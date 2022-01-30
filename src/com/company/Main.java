@@ -7,20 +7,38 @@ public class Main {
         Human student = new Human("Wlodek", "Gajewski", 22);
         Human teacher = new Human("Jan", "Kowalski", 45);
 
+        Animal dog = new Animal("Pies");
+        Animal dog1 = new Animal("Pies");
+        Animal cat = new Animal("Kot");
+
+        Car citroen = new Car("C5", "PSA", "Blue", 2010);
+        Car peugeot = new Car("407", "PSA", "Gold", 2008);
+        student.car = citroen;
+        teacher.car = peugeot;
+
+
         System.out.println("################");
         System.out.println("Imie: " + student.firstName);
         System.out.println("Nazwisko: " + student.lastName);
         System.out.println("Wiek: " + student.age + " lat");
+
+        System.out.println("Model auta: " + student.car.model);
+        System.out.println("Producent auta: " + student.car.producer);
+        System.out.println("Kolor auta: " + student.car.colour);
+        System.out.println("Rok produkcji auta: " + student.car.prodYear);
+        System.out.println("################");
+
         System.out.println("################");
         System.out.println("Imie: " + teacher.firstName);
         System.out.println("Nazwisko: " + teacher.lastName);
         System.out.println("Wiek: " + teacher.age + " lat");
+
+        System.out.println("Model auta: " + teacher.car.model);
+        System.out.println("Producent auta: " + teacher.car.producer);
+        System.out.println("Kolor auta: " + teacher.car.colour);
+        System.out.println("Rok produkcji auta: " + teacher.car.prodYear);
         System.out.println("################");
 
-
-        Animal dog = new Animal("Pies");
-        Animal dog1 = new Animal("Pies");
-        Animal cat = new Animal("Kot");
 
         dog.takeForAWalk();
         dog.takeForAWalk();
