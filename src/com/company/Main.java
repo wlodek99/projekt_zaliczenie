@@ -16,16 +16,52 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+        Human Jan = new Human();
+        Human Anna = new Human();
 
         Diesel citroen = new Diesel("Citroen", "C5", 2010, "Blue");
         Electric renault = new Electric("Renault", "Clio", 2020, "White");
+        Electric tesla = new Electric("Tesla", "S", 2021, "White");
+
+        citroen.value = 10000.00;
+        renault.value = 8000.00;
+        tesla.value = 100000.0;
+        System.out.println("######################");
+        Jan.addCar(citroen);
+        Jan.addCar(tesla);
+        Jan.addCar(renault);
+        Jan.addCar(citroen);
+        Jan.addCar(tesla);
+        Jan.addCar(renault);
+        System.out.println("######################");
+        Jan.removeCar(tesla);
+        System.out.println("######################");
+        System.out.println(Jan.Car(citroen));
+        System.out.println(Jan.getGarageValue());
+        System.out.println("######################");
+        Anna.addCar(citroen);
+        Anna.addCar(tesla);
+        Anna.addCar(renault);
+        System.out.println("######################");
+        citroen.Sale(Jan, Anna, 10000.0);
+        System.out.println("######################");
+        Jan.cash = 100.0;
+        Anna.cash = 10000.0;
+        System.out.println("Ilosc pieniedzy Jana przed sprzedaza: " + Jan.cash);
+        System.out.println("Ilosc pieniedzy Anny przed kupnem: " + Anna.cash);
+
+        citroen.Sale(Jan, Anna, 10000.0);
+        System.out.println("######################");
+
+
+
+
+
+    /*
 
         Phone samsung = new Phone("Samsung", "Android", 2021, 6.0, 16);
         samsung.installAnApp("WhatsApp");
         samsung.installAnApp("Snake", "v1.00");
-
-
 
         System.out.println("######################");
         System.out.println("#####Instalowanie#####");
@@ -48,7 +84,7 @@ public class Main {
         System.out.println(renault.capacitance);
 
 
-        /*
+
 
         Human student = new Human();
         Human teacher = new Human();

@@ -8,6 +8,7 @@ public abstract class Device implements Salleable {
     public String model;
     public Integer prodYear;
     public String colour;
+    public Double value;
 
 
     public Device(String producer, String model, Integer prodYear, String colour) {
@@ -15,6 +16,7 @@ public abstract class Device implements Salleable {
         this.model = model;
         this.prodYear = prodYear;
         this.colour = colour;
+        this.value = 0.0;
     }
 
     public abstract void turnOn();
