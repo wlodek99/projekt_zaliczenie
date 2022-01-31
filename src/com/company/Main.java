@@ -3,11 +3,52 @@ package com.company;
 import com.company.creatures.FarmAnimal;
 import com.company.creatures.Human;
 import com.company.creatures.Pet;
+import com.company.devices.Diesel;
+import com.company.devices.Electric;
+import com.company.devices.LPG;
+import com.company.devices.Phone;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Main {
 
     public static void main(String[] args) {
+
+
+
+        Diesel citroen = new Diesel("Citroen", "C5", 2010, "Blue");
+        Electric renault = new Electric("Renault", "Clio", 2020, "White");
+
+        Phone samsung = new Phone("Samsung", "Android", 2021, 6.0, 16);
+        samsung.installAnApp("WhatsApp");
+        samsung.installAnApp("Snake", "v1.00");
+
+
+
+        System.out.println("######################");
+        System.out.println("#####Instalowanie#####");
+        System.out.println("######################");
+        List<String> apps = new ArrayList<>();
+        apps.add("Pasjans");
+        apps.add("FlappyBirds");
+        samsung.installAnApp(apps);
+        System.out.println("###################");
+        System.out.println("####Tankowanie#####");
+        System.out.println("###################");
+        System.out.println(citroen.oil);
+        citroen.Refuel();
+        System.out.println(citroen.oil);
+        System.out.println("##################");
+        System.out.println("#####Ladowanie####");
+        System.out.println("##################");
+        System.out.println(renault.capacitance);
+        renault.Refuel();
+        System.out.println(renault.capacitance);
+
+
+        /*
 
         Human student = new Human();
         Human teacher = new Human();
@@ -33,10 +74,6 @@ public class Main {
         pig.beEaten();
 
 
-
-
-
-        /*
 
         Human student = new Human("Wlodek", "Gajewski", 22);
         Human teacher = new Human("Jan", "Kowalski", 45);
