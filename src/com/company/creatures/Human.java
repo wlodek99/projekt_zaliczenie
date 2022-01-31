@@ -56,15 +56,17 @@ public class Human extends Animal{
 
     public void setCar(Car car, Integer space) {
         if(salary > car.value){
-            if(garage[space] != null){
+            if(garage[space] == null){
                 this.garage[space] = car;
+                car.owners.add(this);
                 System.out.println("Gratulacje stac cie na auto, mozesz kupic je za gotowke!");
             }else{
                 System.out.println("Miejsce w garazu jest juz zajete przez auto");
             }
         }else if(salary > (car.value / 12)){
-            if(garage[space] != null){
+            if(garage[space] == null){
                 this.garage[space] = car;
+                car.owners.add(this);
                 System.out.println("Co najwyzej mozesz kupic na raty!");
             }else{
                 System.out.println("Miejsce w garazu jest juz zajete przez auto");

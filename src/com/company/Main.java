@@ -26,6 +26,49 @@ public class Main {
         citroen.value = 10000.00;
         renault.value = 8000.00;
         tesla.value = 100000.0;
+        Jan.cash = 10000.00;
+        Anna.cash = 30000.00;
+        Jan.salary = 1000000.00;
+        Anna.salary = 1000000.00;
+
+        Jan.firstName = "Jan";
+        Jan.lastName = "Kowalski";
+        Jan.age = 23;
+        Anna.firstName = "Anna";
+        Anna.lastName = "Nowak";
+        Anna.age = 45;
+
+        System.out.println("######################");
+        System.out.println("########Dodanie#######");
+        System.out.println("######################");
+        Jan.addCar(citroen);
+        citroen.carOwners();
+        System.out.println("######################");
+        System.out.println("######Wlasciciel######");
+        System.out.println("######################");
+        Jan.setCar(citroen, 1);
+        citroen.carOwners();
+        System.out.println("######################");
+        System.out.println("#######Sprzedaz#######");
+        System.out.println("######################");
+        citroen.Sale(Jan, Anna, 1000.0);
+        citroen.carOwners();
+        System.out.println("######################");
+        System.out.println("######Wlasciciele#####");
+        System.out.println("######################");
+        System.out.println("Wlasciciele? " + citroen.checkOwners());
+        System.out.println("Wlasciciele? " + tesla.checkOwners());
+
+
+
+
+
+
+
+
+
+           /*
+
         System.out.println("######################");
         Jan.addCar(citroen);
         Jan.addCar(tesla);
@@ -55,9 +98,6 @@ public class Main {
 
 
 
-
-
-    /*
 
         Phone samsung = new Phone("Samsung", "Android", 2021, 6.0, 16);
         samsung.installAnApp("WhatsApp");
